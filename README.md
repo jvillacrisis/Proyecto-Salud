@@ -1,2 +1,2 @@
-# Proyeco Salud
+# Proyecto Salud
 Desarrollo de Aplicaciones en Salud
