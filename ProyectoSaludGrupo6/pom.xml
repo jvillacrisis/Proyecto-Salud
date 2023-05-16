@@ -22,7 +22,13 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.mysql.</groupId>
+        </dependency>
+    </dependencies>
+    
     <build>
         <plugins>
             <plugin>
