@@ -22,11 +22,12 @@ public class LoginServlet extends HttpServlet {
             VHtml objVHtml = new VHtml();
             sHtml = objVHtml.getHeader()+objVHtml.getBody()+
                     "<h3 class=\"text-primary text-center\">MENU DEL SISTEMA</h3>"
-                    + "<a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n" 
-                    + "Salir</button></a>\n"
                     + "<br><br><a href=\"./Paciente\">"
                     + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" /> <br>"
                     + "PACIENTES</a>"
+                    + "<br>"
+                    + "<a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n" 
+                    + "Salir</button></a>\n"
                     +objVHtml.getFooter();
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -55,11 +56,12 @@ public class LoginServlet extends HttpServlet {
             {
                 sHtml = objVHtml.getHeader()+objVHtml.getBody()+
                     "<h3 class=\"text-primary text-center\">MENU DEL SISTEMA</h3>"
-                    + "<a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n" 
-                    + "Salir</button></a>\n"
                     + "<br><br><a href=\"./Paciente\">"
                     + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" /> <br>"
                     + "PACIENTES</a>"
+                    + "<br>"
+                    + "<br><a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n" 
+                    + "Salir</button></a>\n"
                     +objVHtml.getFooter();
                 response.setContentType("text/html;charset=UTF-8");
                 PrintWriter out = response.getWriter();
@@ -70,11 +72,6 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

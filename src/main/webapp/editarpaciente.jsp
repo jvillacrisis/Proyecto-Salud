@@ -18,15 +18,15 @@
                     <h3>Editar Paciente</h3>
                     <form class="form" action="./Paciente" method="POST">
                         <div class="form-group">
-                            <label  for="IDUsuario" class="form-label">ID</label>
-                            <input class="form-control" name="IDUsuario" value="<%= request.getParameter("idusuario") %>" type="text" placeholder="Ingrese ID"/>
+                            <label  for="idusuario" class="form-label">ID</label>
+                            <input class="form-control" name="idusuario" value="<%= request.getParameter("idusuario") %>" type="text" placeholder="Ingrese ID"/>
                         </div>
                         <div class="form-group">
                             <label  for="nombre" class="form-label">Nombre</label>
                             <input class="form-control" name="nombre" value="<%= request.getParameter("nombre") %>" type="text" placeholder="Ingrese Nombre"/>
                         </div>
                         <div class="form-group">
-                            <label  for="direccion" class="form-label">apellido</label>
+                            <label  for="apellido" class="form-label">Apellido</label>
                             <input class="form-control" name="apellido" value="<%= request.getParameter("apellido") %>" type="text" placeholder="Ingrese Apellido"/>
                         </div>
                         <div class="form-group">
@@ -38,12 +38,12 @@
                             <input class="form-control" name="correo" type="text"  value="<%= request.getParameter("correo") %>"placeholder="Ingrese Correo"/>
                         </div>
                         <div class="form-group">
-                            <label  for="password" class="form-label">Clave</label>
-                            <input class="form-control" name="password" type="text"  value="<%= request.getParameter("password") %>"placeholder="Ingrese Clave"/>
+                            <label for="password" class="form-label">Clave</label>
+                            <input class="form-control" name="password" type="text" value="<%=request.getParameter("password") %>" placeholder="Ingrese Contraseña">
                         </div>
                         <div class="form-group">
-                            <label  for="direccion" class="form-label">Direccion</label>
-                            <input class="form-control" name="direccion" type="text"  value="<%= request.getParameter("direccion") %>"placeholder="Ingrese Direccion"/>
+                            <label for="direccion" class="form-label">Direccion</label>
+                            <input class="form-control" name="direccion" type="text" value="<%=request.getParameter("direccion") %>" placeholder="Ingrese Contraseña">
                         </div>
                         <input type="hidden" value="E" name="accion"/>
                         <br>
