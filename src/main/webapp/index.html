@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Desarrollo de Aplicaciones en Salud</title>
+        <title>Sistema de Citas</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
         <style>
             body {
                 padding-top: 50px;
@@ -17,56 +17,47 @@
         </style>
         <link rel="stylesheet" href="webjars/bootstrap/5.2.2/css/bootstrap.css">
     </head>
-    <body>
-        <div class="container">
-            <!-- Example row of columns -->
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <h3 class="text-primary text-center">BIENVENIDOS A LA APLICACION UW</h3><br>
-                    <form class="form" action="./Login" method="POST" >
-                        <div class="text-center">                
-                            <img class="rounded" alt="" src="img/SIGCI.png" />
+    <body id="login">
+        <div class="row">
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-3">
+
+                        <div class="container-login"> 
+                            <form class="form" action="./Login" method="POST" >
+                                <div class="text-center">                
+                                    <img class="rounded" alt="" src="img/SIGCI.png" />
+                                </div>
+                                <div class="container-form">
+                                    <div class="form-group cont-form">
+                                        <br>
+                                        <label>Usuario</label>
+                                        <input type="text" placeholder="Ingrese su usuario" class="form-control" id="nombre" name="nombre">
+                                    </div>
+                                    <div class="form-group cont-form">
+                                        <br>
+                                        <label>Contraseña</label>
+                                        <input type="password" placeholder="Ingrese su contraseña" class="form-control" id="password" name="password">
+                                    </div>
+                                    <br>
+                                    <div class="text-center">                
+                                        <button type="submit" class="btn btn-success">INGRESAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="text-center reg">¿No tienes cuenta? <a href=registrousuarios.html>Regístrate</a></div>
                         </div>
-                        <br>
-                        <div class="form-group">
-                            <br>
-                            <input type="text" placeholder="Usuario" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="form-group">
-                            <br>
-                            <input type="password" placeholder="Clave" class="form-control" id="password" name="password">
-                        </div>
-                        <br>
-                        <div class="text-center">                
-                            <button type="submit" class="btn btn-success">INGRESAR - UW</button>
-                        </div>
-                        <br>
-                    </form>
+
+                    </div>
+                    <div class="col-md-4"></div>
                 </div>
-                <div class="col-md-3"></div>
-            </div>
-            <a href=registrousuarios.html><h5 class="text-primary text-center">¿Usted es nuevo? Registrese aca</h5></a>
-            <footer>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <p>&copy; Company 2015</p>
-            </footer>
-        </div> 
-        <!-- /container -->        
+
+            </div> 
+        </div>
+        <!-- /container -->    
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
