@@ -116,10 +116,10 @@ public class PacienteServlet extends HttpServlet {
             }
 
         } catch (SQLException | ClassNotFoundException ex) {
-            ex.toString();
+                        ex.toString();
         }
     }
-
+    
     /**
      * Returns a short description of the servlet.
      *
