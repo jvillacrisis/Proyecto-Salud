@@ -21,36 +21,27 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
             String sHtml = "";
             VHtml objVHtml = new VHtml();
-            sHtml = objVHtml.getHeader()+objVHtml.getBody()+
-                    "<h3 class=\"text-primary text-center\">MENU DEL SISTEMA</h3>"
-                    + "<br>"
+            sHtml = objVHtml.getHeader()+objVHtml.getBody()
+                  + "<a href=\"./Cita\">"
+                    + "<img class=\"img-responsive center-block\" src=\"img/citamedica.png\" Width=\"100\" />"
+                    + "Reservar Cita</a>"
                     + "<a href=\"./Paciente\">"
                     + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" />"
-                    + "PACIENTES</a>"
-                                        + "<br>"
-                                        + "<br>"
+                    + "Pacientes</a>"
+
                     + "<a href=\"./Doctor\">"
                     + "<img class=\"img-responsive center-block\" src=\"img/doctor.png\" Width=\"100\" />"
-                    + "DOCTOR</a>"
-                                        + "<br>"
-                                        + "<br>"
-                    + "<a href=\"./Cita\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/citamedica.png\" Width=\"100\" />"
-                    + "CITA</a>"
-                                        + "<br>"
-                                        + "<br>"
+                    + "Doctores</a>"
+
                     + "<a href=\"./Historial\">"
                     + "<img class=\"img-responsive center-block\" src=\"img/historial.png\" Width=\"100\" />"
-                    + "HISTORIAL</a>"      
-                                        + "<br>"
-                                        + "<br>"
+                    + "Historial</a>"      
+
                     + "<a href=\"./EditarDatos\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" />"
-                    + "Editar Datos</a>"      
-                                        + "<br>"
-                                        + "<br>"                    
-                    + "<br><a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">" 
-                    + "Salir</button></a>"
+                    + "<img class=\"img-responsive center-block\" src=\"img/edit.png\" Width=\"100\" />"
+                    + "Editar Datos Personales</a>"      
+                  
+
                     +objVHtml.getFooter();
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -77,36 +68,8 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("index.html");
             else
             {
-                sHtml = objVHtml.getHeader()+objVHtml.getBody()+
-                    "<h3 class=\"text-primary text-center\">MENU DEL SISTEMA</h3>"
-                    + "<br>"
-                    + "<a href=\"./Paciente\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" />"
-                    + "PACIENTES</a>"
-                                        + "<br>"
-                                        + "<br>"
-                    + "<a href=\"./Doctor\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/doctor.png\" Width=\"100\" />"
-                    + "DOCTORES</a>"
-                                        + "<br>"
-                                        + "<br>"
-                    + "<a href=\"./Cita\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/citamedica.png\" Width=\"100\" />"
-                    + "CITAS</a>"
-                                        + "<br>"
-                                        + "<br>"
-                    + "<a href=\"./Historial\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/historial.png\" Width=\"100\" />"
-                    + "HISTORIAL</a>"      
-                                        + "<br>"
-                                        + "<br>"
-                    + "<a href=\"./EditarDatos\">"
-                    + "<img class=\"img-responsive center-block\" src=\"img/paciente.png\" Width=\"100\" />"
-                    + "Editar Datos</a>"      
-                                        + "<br>"
-                                        + "<br>"                            
-                    + "<br><a href=\"./\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">" 
-                    + "Salir</button></a>"
+                sHtml = objVHtml.getHeader()+objVHtml.getBody()
+                +"<div class=\"fondo-1 \"><img src=\"img/fondo.jpg\" ></div>"
                     +objVHtml.getFooter();
                 response.setContentType("text/html;charset=UTF-8");
                 PrintWriter out = response.getWriter();

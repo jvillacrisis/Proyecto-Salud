@@ -32,9 +32,9 @@ public class EditarDatosServlet extends HttpServlet {
             PreparedStatement st = cnx.prepareStatement("SELECT idusuario, nombre, apellido, dni, correo, password, direccion FROM tbusuario WHERE idusuario=1");
             ResultSet rs = st.executeQuery();
             sHtml = objVHtml.getHeader() + objVHtml.getBody()
-                    + "<h3 class=\"text-primary text-center\">Editar Datos</h3> <br>"
-                    + "                    <a href=\"./Login\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n"
-                    + "                            Regresar</button></a>\n"
+                    +"<div class=\"container\">\n"
+                    + "<h3 class=\"text-center\">Editar Datos</h3> <br>"
+
                     + "                        <table class=\"table table-striped\">\n"
                     + "                        <tr>\n"
                     + "                            <th>Idusuario</th>\n"
@@ -58,7 +58,9 @@ public class EditarDatosServlet extends HttpServlet {
                         + "   <td><a href=\"./EditarDatosPaciente.jsp?idusuario=" + rs.getInt(1) + "&nombre=" + rs.getString(2) + "&apellido=" + rs.getString(3) + "&dni=" + rs.getInt(4) + "&correo=" + rs.getString(5) + "&password=" + rs.getString(6) + "&direccion=" + rs.getString(7) + "\"><button class=\"btn btn-warning\"> Editar</button></a></td>\n"
                         + "</tr>\n";
             }
-            sHtml += sTabla + "</table>" + objVHtml.getFooter();
+            sHtml += sTabla + "</table>"
+                         +"</div>\n"
+                    + objVHtml.getFooter();
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
             out.println(sHtml);
