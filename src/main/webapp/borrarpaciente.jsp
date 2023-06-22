@@ -117,5 +117,8 @@
                 <div class="md-4"></div>
             </div>
         </div>
+        <footer>
+            <p>&copy; 2023 UNIVERSIDAD NORBERT WIENER - Grupo 6</p>
+        </footer>
     </body>
 </html>
