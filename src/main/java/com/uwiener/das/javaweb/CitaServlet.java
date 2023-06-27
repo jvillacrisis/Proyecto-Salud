@@ -50,8 +50,6 @@ public class CitaServlet extends HttpServlet {
             ResultSet rs = st.executeQuery();
             sHtml = objVHtml.getHeader() + objVHtml.getBody()
                     + "<h3 class=\"text-primary text-center\">Registro de Citas</h3> <br>"
-                    + "                    <a href=\"./Login\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n"
-                    + "                            Regresar</button></a>\n"
                     + "                    <a href=\"nuevacita.jsp\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n"
                     + "                            Nueva Cita</button></a>\n"
                     + "                    <table class=\"table table-striped\">\n"

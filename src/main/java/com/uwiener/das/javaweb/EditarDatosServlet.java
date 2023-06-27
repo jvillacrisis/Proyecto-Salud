@@ -29,12 +29,20 @@ public class EditarDatosServlet extends HttpServlet {
         String sTabla = "";
         try {
             cnx = initializeDatabases();
-            PreparedStatement st = cnx.prepareStatement("SELECT idusuario, nombre, apellido, dni, correo, password, direccion FROM tbusuario WHERE idusuario=1");
+            PreparedStatement st = cnx.prepareStatement("SELECT idusuario, nombre, apellido, dni, correo, password, direccion FROM tbusuario WHERE DNI like ?");
+            if (request.getParameter("DNI") != null) {
+                st.setString(1, "%" + request.getParameter("DNI").toString() + "%");
+            } else {
+                st.setString(1, "%%");
+            }
             ResultSet rs = st.executeQuery();
             sHtml = objVHtml.getHeader() + objVHtml.getBody()
-                    +"<div class=\"container\">\n"
+                    + "<div class=\"container\">\n"
                     + "<h3 class=\"text-center\">Editar Datos</h3> <br>"
-
+                    + "                   <form  action=\"./EditarDatos\">"
+                    + "                            <input type=\"text\" name =\"DNI\" />  "
+                    + "                           <button type=\"summit\" class=\"btn btn-success\">Buscar</button>\n"
+                    + "                   </form>"
                     + "                        <table class=\"table table-striped\">\n"
                     + "                        <tr>\n"
                     + "                            <th>Idusuario</th>\n"
@@ -59,7 +67,7 @@ public class EditarDatosServlet extends HttpServlet {
                         + "</tr>\n";
             }
             sHtml += sTabla + "</table>"
-                         +"</div>\n"
+                    + "</div>\n"
                     + objVHtml.getFooter();
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();

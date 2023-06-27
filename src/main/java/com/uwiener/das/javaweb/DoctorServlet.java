@@ -42,8 +42,6 @@ public class DoctorServlet extends HttpServlet {
             ResultSet rs = st.executeQuery();
             sHtml = objVHtml.getHeader() + objVHtml.getBody()
                     + "<h3 class=\"text-primary text-center\">Lista de Doctores</h3> <br>"
-                    + "                    <a href=\"./Login\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n"
-                    + "                            Regresar</button></a>\n"
                     + "                    <a href=\"nuevomedico.jsp\"><button class=\"btn btn-success glyphicon glyphicon-new-window\">\n"
                     + "                            Nuevo Medico</button></a>\n"
                     + "                    <table class=\"table table-striped\">\n"
