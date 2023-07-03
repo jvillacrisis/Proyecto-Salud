@@ -1,0 +1,47 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 14 jun. 2023, 07:57:39
+    Author     : Grupo6
+*/
+body{background-color: #f1f1f1 !important;}
+body#login, body#registrouser{background-color:  #00B0CA}
+.container-login{width: 538px;height: 723px;top: 150px;background: #FFFFFF;box-shadow: 0px 10px 23px rgba(0, 0, 0, 0.16);border-radius: 10px; margin:0 auto}
+.container-login img{width: 200px; margin-top: 30px}
+.container-form{padding: 60px}
+.container-form button{width: 100%; background:#00B0CA; height: 50px; border:none }
+.container-form button:hover, .container-form button:active {background:#068194}
+.container-form .form-group input { height: 50px}
+.container-login .reg { display: block}
+.container-login .reg a, #registrouser .container-form a { color: #00B0CA; text-decoration: none}
+.container-form .cont-form, #registrouser .cont-form{ position: relative}
+.container-form label { font-size: 11px; color: #6A6A6A; background: #ffffff; top: 15px; position: absolute; left: 5px}
+ #registrouser .cont-reg{padding: 60px}
+ #registrouser .cont-reg a.arrow{font-size: 35px; color: #00B0CA; text-decoration: none; font-weight: bold}
+ #registrouser .container-form{padding: 20px 60px 0px 60px}
+ #registrouser .container-form label{ font-size: 11px; color: #6A6A6A; background: #ffffff; top: -6px; position: absolute; left: 5px; }
+ #registrouser .container-form input{margin-bottom: 7px}
+ nav.nav-system{ height: 120px; background-color: #ffffff; box-shadow: 0px 0px 27px 14px #E1E1E1; padding: 10px 0px 10px 0px}
+ nav.nav-system img{ width: 100px;}
+ nav.nav-system a button{ float: right; margin-top: 30px}
+.lateral{    display: flex; justify-content: center; align-items: center; margin: 18px 20px 0px 20px  !important;} 
+.lateral a{ padding-top: 10px; text-align: center; color: #00B0CA; font-size: 15px; font-weight: 600; text-decoration: none;border: 1px solid #d4d4d4; height: 80px; width: 200px; background-color: #ffffff}
+.lateral img{ text-align: center; width: 25px; margin: 0 auto}
+footer{ color: #6a6a6a; border-top: 1px solid #D4D4D4; text-align: center; vertical-align: middle; margin-top: 30px }
+footer p{margin-top: 30px}
+.fondo-1{background-color: #b1d5d1; display:flex; justify-content: center; align-items: center}
+body h3{color: #2B2B2B !important; font-size: 23px; margin-top: 30px; text-align: center}
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
+
+.results tr[visible='true']{
+  display:table-row;
+}
+ 
+ 
+ 
+ 
